@@ -9,12 +9,41 @@
 <body>
     <h1>JavaScript Conditional Statements</h1>
 
+    <form>
+        <label for="age">Age:</label>
+        <input type="text" id="age" class="form-control" placeholder="Enter age here">
+        <button type="submit" id="btn_age" class="btn btn-info" onclick="checkAge()">Check</button>
+    </form>
+
     <script>
-        let age = 15;
+        function checkAge(){
+            let age = document.getElementById("age").value;
+
+            if(age < 18){
+                alert("You are underage.");
+            }
+            else if( age > 18){
+                alert("You are of legal age.");
+            }
+            else{
+                alert("Age could be categorized.");
+            }
+
+         }
+
+        /* without user input
+        let age = "eight";
 
         if(age < 18){
             alert("You are underage.");
         }
+        else if( age > 18){
+            alert("You are of legal age.");
+        }
+        else{
+            alert("Age could be categorized.");
+        }
+        */
     
     </script>
 
